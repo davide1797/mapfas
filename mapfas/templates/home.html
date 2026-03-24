@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PFAS</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" onclick="test()">🧠 Test</a></li>
+            <li><a href="#" onclick="sus_questionnaire()">📝 Questionnaire</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1 class="title">🧪 PFAS</h1>
+        
+        <p class="intro">
+            Per- and polyfluoroalkyl substances (PFAS) are synthetic chemical compounds used widely in everyday products. 
+            Also named "forever chemicals", they are persistent in the environment, due to the interactions between carbon and fluorine, and pose risks to human health, animals, and plants. 
+            PFAS can be found in firefighting foams, non-stick cookware, water-repellent clothing, stain-resistant fabrics, some cosmetics, and grease- or water-resistant products.
+        </p>
+
+        <section class="example-section">
+            <h2>Try an example map</h2>
+            <form method="POST">
+                <button type="submit" name="action" class="btn-primary">Show example</button>
+            </form>
+        </section>
+
+        <section class="download-section">
+            <h2>Or, starting from <a href="/download" class="download-link">this</a> ontology, upload your own Knowledge Graph</h2>
+
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+                <label class="file-dropzone">
+                    <input type="file" name="ontology_file" required>
+                    <span>📂 Drag & Drop your ontology here or click to select</span>
+                </label>
+                <button type="submit" class="btn-primary mt-2">Upload Your KG</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function home() {
+            window.location.href = "/";
+        }
+
+        function test() {
+            window.location.href = "/test";
+        }
+
+        function sus_questionnaire() {
+            window.location.href = "/questionnaire";
+        }
+    </script>
+</body>
+</html>

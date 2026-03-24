@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" onclick="home()">🧪 PFAS</a></li>
+            <li><a href="#" onclick="map()">🗺️ Map</a></li>
+            <li><a href="#" onclick="sus_questionnaire()">📝 Questionnaire</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1 class="title">🧠 PFAS Test</h1>
+
+        {% if question %}
+        <form method="post" action="/test" class="quiz-card">
+            <p class="question">{{ question.question }}</p>
+
+            <label class="option">
+                <input type="radio" name="answer" value="a" required>
+                <span>{{ question.option_a }}</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="answer" value="b">
+                <span>{{ question.option_b }}</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="answer" value="c">
+                <span>{{ question.option_c }}</span>
+            </label>
+
+            <label class="option">
+                <input type="radio" name="answer" value="d">
+                <span>{{ question.option_d }}</span>
+            </label>
+
+            <input type="hidden" name="correct" value="{{ question.correct_option }}">
+
+            <button type="submit" class="submit-btn" {% if finished %}disabled{% endif %} >Submit Answer</button>
+        </form>
+        {% endif %}
+
+        {% if result %}
+            <p class="result {{ 'correct' if result == 'Correct' else 'incorrect' }}">
+                {{ result }}
+            </p>
+        {% endif %}
+
+        {% if finished %}
+            <div class="final-score">
+                <h2>🎉 Test Complete</h2>
+                <p>Your final score:</p>
+                <p class="score">{{ score }} / {{ total }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+    function home() {
+        window.location.href = "/";
+    }
+
+    function map() {
+        window.location.href = "/map_view";
+    }
+
+    function sus_questionnaire() {
+        window.location.href = "/questionnaire";
+    }
+    </script>
+
+</body>
+</html>

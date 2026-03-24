@@ -1,0 +1,393 @@
+.main-content {
+    margin-left: 200px; /* sidebar width + some gap */
+    padding: 20px;
+}
+
+.intro {
+    background: #f9fafb;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid #4f46e5;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+body {
+    margin: 0;
+    padding: 16px 24px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 0 0 8px 0;
+}
+
+h3 {
+    margin: 12px 0 6px 0;
+}
+
+p {
+    margin: 0 0 12px 0;
+}
+
+button {
+    margin-right: 8px;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #1f2937;
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+.file-input {
+    margin-bottom: 0.6rem;
+}
+
+.file-dropzone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #4f46e5;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    color: #4f46e5;
+    font-weight: 500;
+}
+
+.file-dropzone input[type="file"] {
+    display: none; /* hide default input */
+}
+
+.file-dropzone:hover {
+    background: #f0f4ff;
+    border-color: #4338ca;
+}
+
+.map-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.map-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+#map {
+    width: 100%;
+    min-width: 500px;
+    height: auto;
+}
+
+#tables-container {
+    flex: 1;
+    min-width: 320px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    padding: 6px;
+}
+
+.map-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Matrix table container */
+.matrix-column {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+/* Table layout */
+#matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-collapse: collapse; 
+    border: 1px solid #eee;
+}
+
+/* Table header */
+#matrix-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+/* Table rows */
+#matrix-table tr {
+    transition: background 0.2s;
+}
+
+/* Zebra striping for readability */
+#matrix-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Table cells */
+#matrix-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Bottom border for last row */
+#matrix-table tr:last-child td {
+    border-bottom: 1px solid #eee;
+}
+
+.pfas-column {
+    width: 250px;      
+    flex-shrink: 0;    
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;            
+}
+
+.pfas-column table,
+.matrix-column table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#pfas-info-panel {
+    width: 100%;       
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-top: 10px;
+    background: #fafafa;
+    display: none;     
+    border-radius: 6px;
+}
+
+#pfas-info-panel {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#info-box {
+    width: 200px;          
+    min-height: 120px;    
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    box-sizing: border-box;
+    flex-shrink: 0;        
+}
+
+.map-point {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.map-point:hover {
+    transform: scale(1.5);
+}
+
+.pfas-column {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+#pfas-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #eee;  
+}
+
+#pfas-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #eee;  
+}
+
+#pfas-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+#pfas-table tr {
+    transition: background 0.2s;
+}
+
+#pfas-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+#pfas-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#pfas-table a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+#pfas-table a:hover {
+    text-decoration: underline;
+}
+
+.selected-pfas {
+    font-weight: bold;
+    color: darkred;
+}
+
+#pfas-info-panel {
+    background: #fafafa;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+#pfas-info-panel {
+    transition: all 0.3s ease;
+}
+
+.sidebar {
+    width: 180px;              /* fixed width */
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+    position: fixed;           /* sidebar stays on the left */
+    top: 0;
+    left: 0;
+    height: 100vh;             /* full height */
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.quiz-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.option:hover {
+    background: #f5f7fa;
+}
+
+.submit-btn {
+    width: 25%;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #4338ca;
+}
+
+.result {
+    text-align: center;
+    margin-top: 1.2rem;
+    font-weight: bold;
+}
+
+.result.correct {
+    color: #16a34a;
+}
+
+.result.incorrect {
+    color: #dc2626;
+}
+
+.final-score {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.final-score .score {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
